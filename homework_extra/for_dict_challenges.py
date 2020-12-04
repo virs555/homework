@@ -113,7 +113,7 @@ school = [
 ]
 is_male = {
   'Маша': False,
-  'Оля': True,
+  'Оля': False,
   'Олег': True,
   'Миша': True,
 }
@@ -133,12 +133,18 @@ for classes in school:
       else:
         classes_gender_female[classes['class']] = 1
 
-print(classes_gender_male) 
-print(classes_gender_female)
-
+max_gender_count = 0
+max_male =""
+max_female = ""
 for i in classes_gender_male:
-  print(i) # не понимаю как итератором получить максимальные значение среди ключей
+  if classes_gender_male[i] > max_gender_count:
+    max_male = i
+  print(f'Больше всего мальчиков в классе {max_male}') 
 
+for i in classes_gender_female:
+  if classes_gender_female[i] > max_gender_count:
+    max_female = i
+  print(f'Больше всего мальчиков в классе {max_female}') 
 
 #НЕ ВЫПОЛНИЛ
 # Пример вывода:
