@@ -141,6 +141,8 @@ for i in classes_gender_male:
     max_male = i
   print(f'Больше всего мальчиков в классе {max_male}') 
 
+max_gender_count = 0
+
 for i in classes_gender_female:
   if classes_gender_female[i] > max_gender_count:
     max_female = i
